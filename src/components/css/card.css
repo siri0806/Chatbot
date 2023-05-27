@@ -1,0 +1,17 @@
+.content {
+  width: 50%;
+  margin: 100px auto 100px auto;
+}
+.description {
+  line-height: 1.5;
+}
+.animation-left {
+  height: 200px;
+  width: 200px;
+  float: left;
+}
+.animation-right {
+  height: 200px;
+  width: 200px;
+  float: right;
+}

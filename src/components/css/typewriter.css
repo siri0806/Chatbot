@@ -1,0 +1,50 @@
+.heading {
+  padding-top: 5rem;
+  margin-left: 5rem;
+  font-family: "Solitreo", cursive;
+}
+
+.typewriter {
+  padding-top: 2rem;
+  padding-bottom: 5px;
+  margin-left: 5rem;
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  overflow: hidden; /* Create a new block formatting context to contain floats */
+}
+
+.text-container {
+  width: 25rem;
+  float: left; /* Float the text container to the left */
+  /* Adjust the width to your desired value */
+}
+
+.chatbotmob {
+  width: 31rem;
+  float: right; /* Float the image to the left */
+  margin-right: 200px; /* Add spacing between the text container and the image */
+}
+
+@media only screen and (max-width: 800px) {
+  .chatbotmob {
+    width: 20rem;
+    margin-right: 2rem;
+    float: right;
+  }
+  .heading {
+    padding-top: 2rem;
+    margin-left: 2rem;
+    font-family: "Solitreo", cursive;
+  }
+  .typewriter {
+    padding-top: 2rem;
+    padding-bottom: 5px;
+    margin-left: 2rem;
+    font-family: "Lato", sans-serif;
+  }
+}
+
+@media screen and (min-width: 800px) {
+}
