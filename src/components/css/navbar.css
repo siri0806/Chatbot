@@ -116,3 +116,10 @@
     color: #ffdd40;
   }
 }
+
+.chatbot {
+  margin-left: 1rem;
+  float: left;
+  height: 50px;
+  width: 50px;
+}

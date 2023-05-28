@@ -11,8 +11,11 @@ function NavBarGit() {
       <nav className="navbar">
         <div className="nav-container">
           <NavLink exact to="/" className="nav-logo">
-            CodeBucks
-            <i className="fas fa-code"></i>
+            <img
+              className="chatbot"
+              src="./images/chatbot.png"
+              alt="chatbot icon"
+            />
           </NavLink>
 
           <ul className={click ? "nav-menu active" : "nav-menu"}>
@@ -39,25 +42,56 @@ function NavBarGit() {
               </NavLink>
             </li>
             <li className="nav-item">
+              <a
+                href="mailto:hostelchatbot544@gmail.com"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Feedback
+              </a>
+            </li>
+            <li className="nav-item">
               <NavLink
                 exact
-                to="/blog"
+                to="/login"
                 activeClassName="active"
                 className="nav-links"
                 onClick={handleClick}
               >
-                Blog
+                LogIn
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink
                 exact
-                to="/contact"
+                to="/signin"
                 activeClassName="active"
                 className="nav-links"
                 onClick={handleClick}
               >
-                Contact Us
+                SignIn
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/status"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Status
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/admin"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Admin
               </NavLink>
             </li>
           </ul>
