@@ -11,7 +11,7 @@ const HomePage = () => {
 
       <Card
         animation="fade-left"
-        content={worksData["electrician"].works}
+        content={worksData["roomCleaning"].works}
         images="./images/room-cleaning.png"
         float="animation-left"
       />
