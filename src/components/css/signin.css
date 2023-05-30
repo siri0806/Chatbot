@@ -1,0 +1,134 @@
+/* Container styles */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Head styles */
+.head {
+  text-align: center;
+}
+
+.head img {
+  width: 100px;
+  height: 100px;
+}
+
+.head h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Signin styles */
+.signin {
+  width: 400px;
+  padding: 2rem;
+  background-color: #5ed99c;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.signin h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Form group styles */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.5rem;
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.btn-dark {
+  color: #fff;
+  background-color: #343a40;
+  border-color: #343a40;
+}
+
+.btn-dark:hover {
+  background-color: #23272b;
+  border-color: #1d2124;
+}
+
+.btn-dark:focus,
+.btn-dark.focus {
+  box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  /* Container styles */
+  .form-container {
+    height: 100vh;
+  }
+
+  /* Head styles */
+  .head img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .head h1 {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+
+  /* Signin styles */
+  .signin {
+    width: 90%;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+  }
+
+  .signin h2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Form group styles */
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .form-group input {
+    font-size: 0.9rem;
+  }
+
+  /* Button styles */
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.25rem 0.5rem;
+  }
+}

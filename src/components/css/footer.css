@@ -2,11 +2,10 @@
   margin: 0;
   padding: 0;
 }
+
 footer {
-  font-family: "BioRhyme", serif;
-  display: absolute;
-  padding: 0.3em;
-  text-align: center;
-  background-color: #9df1df;
   margin-top: auto;
+  background-color: #9df1df;
+  padding: 10px;
+  text-align: center;
 }
