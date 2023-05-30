@@ -18,7 +18,7 @@ const LogIn = () => {
           <h1>Hostel Chat Bot</h1>
         </div>
         <div className="signin">
-          <h2>Log In To Your Account</h2>
+          <h2> In To Your Account</h2>
 
           <form onSubmit={handleSubmit}>
             <div className="form-group">
