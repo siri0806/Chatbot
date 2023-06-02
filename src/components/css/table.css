@@ -1,0 +1,32 @@
+.complain-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.complain-table th,
+.complain-table td {
+  border: 2px solid #000000;
+  padding: 8px;
+}
+
+.complain-table th {
+  background-color: #f2f2f2;
+}
+
+.options {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.complain-select {
+  width: 200px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+  font-family: "Nunito", Times, serif;
+}

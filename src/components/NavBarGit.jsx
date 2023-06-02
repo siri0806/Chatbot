@@ -10,7 +10,7 @@ function NavBarGit() {
     <>
       <nav className="navbar">
         <div className="nav-container">
-          <NavLink exact to="/" className="nav-logo">
+          <NavLink to="/" className="nav-logo">
             <img
               className="chatbot"
               src="./images/chatbot.png"
@@ -21,9 +21,8 @@ function NavBarGit() {
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               <NavLink
-                exact
                 to="/"
-                activeClassName="active"
+                activeclassname="active"
                 className="nav-links"
                 onClick={handleClick}
               >
@@ -32,9 +31,8 @@ function NavBarGit() {
             </li>
             <li className="nav-item">
               <NavLink
-                exact
                 to="/about"
-                activeClassName="active"
+                activeclassname="active"
                 className="nav-links"
                 onClick={handleClick}
               >
@@ -52,9 +50,8 @@ function NavBarGit() {
             </li>
             <li className="nav-item">
               <NavLink
-                exact
                 to="/login"
-                activeClassName="active"
+                activeclassname="active"
                 className="nav-links"
                 onClick={handleClick}
               >
@@ -63,31 +60,18 @@ function NavBarGit() {
             </li>
             <li className="nav-item">
               <NavLink
-                exact
-                to="/signin"
-                activeClassName="active"
+                to="/signup"
+                activeclassname="active"
                 className="nav-links"
                 onClick={handleClick}
               >
-                SignIn
+                SignUp
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink
-                exact
-                to="/status"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Status
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                exact
                 to="/admin"
-                activeClassName="active"
+                activeclassname="active"
                 className="nav-links"
                 onClick={handleClick}
               >
