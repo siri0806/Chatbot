@@ -25,7 +25,7 @@ const App = () => {
         <Route path="/tasks" element={<ComplainTable />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </BrowserRouter> //used for navigating without rendering pages again and again
   );
 };
 
