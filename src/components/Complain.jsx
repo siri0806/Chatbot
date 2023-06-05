@@ -1,10 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./css/signin.css";
 
 const Complain = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Check if the user is authenticated
+    const token = localStorage.getItem("token");
+    if (!token) {
+      // User is not authenticated, redirect to login
+      navigate("/login");
+    }
+  }, [navigate]);
   const handleSubmit = (e) => {
     e.preventDefault();
 

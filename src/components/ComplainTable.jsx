@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import "./css/table.css";
 
-const ComplainTable = () => {
+const ComplainTable = ({ complaints }) => {
   const [complains, setComplains] = useState([]);
   const [selectedOption, setSelectedOption] = useState("");
 
@@ -22,7 +22,7 @@ const ComplainTable = () => {
   }, []);
 
   const handleCheckboxChange = (complainId) => {
-    const updatedComplains = complains.map((complain) => {
+    const updatedComplains = complaints.map((complain) => {
       if (complain._id === complainId) {
         const updatedComplain = { ...complain, completed: !complain.completed };
         axios
@@ -52,8 +52,8 @@ const ComplainTable = () => {
   };
 
   const filteredComplains = selectedOption
-    ? complains.filter((complain) => complain.problem === selectedOption)
-    : complains;
+    ? complaints.filter((complain) => complain.problem === selectedOption)
+    : complaints;
 
   return (
     <>

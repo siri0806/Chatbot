@@ -23,7 +23,6 @@ const LogIn = () => {
     axios
       .post("/login", userData)
       .then((response) => {
-        console.log(response.data);
         // Handle the response as needed
         if (response.data.success) {
           // User login successful

@@ -49,7 +49,7 @@ const SignIn = () => {
         }, 3000);
       })
       .catch((error) => {
-        toast.error("Email already exists");
+        toast.error("Email already exists/Password exist");
         console.error(error);
         // Handle the error as needed
       });

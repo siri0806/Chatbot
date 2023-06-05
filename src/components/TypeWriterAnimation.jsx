@@ -3,7 +3,7 @@ import "./css/typewriter.css";
 
 const TypeWriterAnimation = () => {
   return (
-    <div className="container">
+    <div className="container-chatbotmob">
       <img
         className="chatbotmob"
         src="./images/chatbotmob.png"

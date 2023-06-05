@@ -2,15 +2,15 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+.body {
   background: linear-gradient(to right, #faffd1, #0dff81);
   padding: 0% 22%;
   font-family: "Nunito", sans-serif;
 }
-.form-container {
+/* .form-container {
   height: 100%;
-}
-.container-lg {
+} */
+.container {
   border: 2px solid black;
   height: 100vh;
   padding: 0px;
@@ -19,7 +19,6 @@ body {
 
 #top {
   background: linear-gradient(45deg, #f2ff5f, #74b4fe);
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -54,7 +53,7 @@ h1 {
 
 .chat-bar-input-block {
   /* border: 2px solid blue; */
-  background-color: var(--bs-secondary-color);
+  background-color: rgba(0, 0, 0, 0.497);
   position: fixed;
   width: 55.5%;
   bottom: 0px;
@@ -105,7 +104,7 @@ h1 {
   outline: none;
 }
 
-h5 {
+.h5 {
   text-align: center;
   font-size: 1.3rem;
   background: rgba(255, 255, 255, 0.4);
@@ -129,7 +128,7 @@ h5 {
 .userText span {
   line-height: 1.5em;
   display: inline-block;
-  background: var(--bs-secondary-color);
+  background: rgba(0, 0, 0, 0.434);
   padding: 10px;
   border-radius: 8px;
   border-bottom-right-radius: 2px;
@@ -138,7 +137,7 @@ h5 {
   animation: floatup 0.5s forwards;
 }
 
-.btn {
+.btnc {
   padding: 0.6em 2em;
   border: none;
   outline: none;
@@ -192,7 +191,7 @@ h5 {
   color: #fff;
 }
 
-.btn:before {
+.btnc:before {
   content: "";
   background: linear-gradient(
     45deg,
@@ -232,7 +231,7 @@ h5 {
   }
 }
 
-.btn:after {
+.btnc:after {
   z-index: -1;
   content: "";
   position: absolute;
@@ -269,7 +268,7 @@ h5 {
 }
 
 @media (max-width: 850px) {
-  body {
+  .body {
     padding: 0px;
   }
 

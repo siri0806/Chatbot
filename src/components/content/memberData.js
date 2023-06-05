@@ -2,7 +2,7 @@ const memberData = {
   vikas: {
     name: "Vikas Kumar",
     works:
-      "Vikas is a skilled developer with experience in HTML, CSS, JavaScript,REST APIS and Java Data Structures and Algorithm. He also possess soft skills like writing poems and communication skills. These skills make him a unique candidate who can understand the user requirements and can express it in a better way. He has a keen interest in web development and his proficiency in java programming languages and strong communication skills make him a valuable asset to any development team.",
+      "Vikas is a skilled developer with experience in HTML, CSS, JavaScript,REST APIS,React Express Mongo DB Node Js and Java Data Structures and Algorithm. He also possess soft skills like writing poems and communication skills. These skills make him a unique candidate who can understand the user requirements and can express it in a better way. He has a keen interest in web development and his proficiency in java programming languages and strong communication skills make him a valuable asset to any development team.",
   },
   arvind: {
     name: "Arvind Kumar",

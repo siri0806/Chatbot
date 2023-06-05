@@ -1,0 +1,31 @@
+input {
+  padding: 0.5rem;
+  width: 12rem;
+}
+
+.buttonadmin {
+  padding: 5px;
+  background-color: rgb(99, 255, 33);
+  border: none;
+  border-radius: 10%;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.main {
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+}
+
+.admin {
+  width: 300px;
+  height: 300px;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.form {
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
