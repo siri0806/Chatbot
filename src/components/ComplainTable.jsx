@@ -12,7 +12,7 @@ const ComplainTable = ({ complaints }) => {
 
   useEffect(() => {
     axios
-      .get("/complain")
+      .get("https://hostelchatbotnitrr.onrender.com/complain")
       .then((response) => {
         setComplains(response.data);
       })

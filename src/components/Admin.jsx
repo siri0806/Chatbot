@@ -16,7 +16,7 @@ const Admin = () => {
     event.preventDefault();
 
     axios
-      .post("/admin", { key: passkey })
+      .post("https://hostelchatbotnitrr.onrender.com/admin", { key: passkey })
       .then((response) => {
         setComplaints(response.data.complains);
         toast.success("Scroll Down For Complaints", {

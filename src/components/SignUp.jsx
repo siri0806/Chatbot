@@ -36,7 +36,7 @@ const SignIn = () => {
 
     // Send a POST request to the backend API
     axios
-      .post("/signup", userData)
+      .post("https://hostelchatbotnitrr.onrender.com/signup", userData)
       .then((response) => {
         // Display toast message
         toast.success("Email registered successfully");

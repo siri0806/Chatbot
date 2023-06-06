@@ -31,7 +31,7 @@ const Complain = () => {
 
     // Send a POST request to the backend API
     axios
-      .post("/complain", complainData)
+      .post("https://hostelchatbotnitrr.onrender.com/complain", complainData)
       .then((response) => {
         console.log(response.data);
         // Handle the response as needed
