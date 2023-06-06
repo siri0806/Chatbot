@@ -21,7 +21,7 @@ const LogIn = () => {
 
     // Send a POST request to the backend API
     axios
-      .post("/login", userData)
+      .post("https://hostelchatbotnitrr.onrender.com/login", userData)
       .then((response) => {
         // Handle the response as needed
         if (response.data.success) {
