@@ -58,7 +58,7 @@ const ChatBot = () => {
       handleRedirect();
     } else if (userText === "6") {
       handleRedirect();
-    } else if (userText == "7") {
+    } else if (userText === "7") {
       handleRedirect();
     }
 
