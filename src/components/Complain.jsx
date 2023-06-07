@@ -16,6 +16,7 @@ const Complain = () => {
       navigate("/login");
     }
   }, [navigate]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -36,17 +37,17 @@ const Complain = () => {
         console.log(response.data);
         // Handle the response as needed
         if (response.data.success) {
-          // complain registration successful
+          // Complain registration successful
           toast.success("Complain Registered Successfully");
         } else {
-          toast.error("Erorr Occured, Please Try Again Later.");
+          toast.error("Error Occurred, Please Try Again Later.");
         }
       })
       .catch((error) => {
         console.error(error);
         // Handle the error as needed
         if (error.response && error.response.status === 409) {
-          toast.error("Erorr Occured, Please Try Again Later.");
+          toast.error("Error Occurred, Please Try Again Later.");
         }
       });
   };
@@ -57,6 +58,7 @@ const Complain = () => {
   const [room, setRoom] = useState("");
   const [problem, setProblem] = useState("");
   const [comment, setComment] = useState("");
+
   return (
     <div>
       <div className="form-container">
@@ -95,6 +97,8 @@ const Complain = () => {
                   name="contact"
                   placeholder="Enter Your Contact Number"
                   required
+                  pattern="[0-9]{10}"
+                  title="Please enter a 10-digit phone number."
                   value={contact}
                   onChange={(e) => setContact(e.target.value)}
                 />
@@ -174,7 +178,6 @@ const Complain = () => {
                   id="comment"
                   name="comment"
                   placeholder="Leave a comment"
-                  required
                   value={comment}
                   onChange={(e) => setComment(e.target.value)}
                 />
