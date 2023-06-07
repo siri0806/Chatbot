@@ -7,14 +7,14 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import "./css/table.css";
 
 const ComplainTable = ({ complaints }) => {
-  const [complains, setComplains] = useState([]);
+  const [complaintsData, setComplaintsData] = useState([]);
   const [selectedOption, setSelectedOption] = useState("");
 
   useEffect(() => {
     axios
       .get("https://hostelchatbotnitrr.onrender.com/complain")
       .then((response) => {
-        setComplains(response.data);
+        setComplaintsData(response.data);
       })
       .catch((error) => {
         console.log(error);
@@ -22,16 +22,19 @@ const ComplainTable = ({ complaints }) => {
   }, []);
 
   const handleCheckboxChange = (complainId) => {
-    const updatedComplains = complaints.map((complain) => {
+    const updatedComplaints = complaintsData.map((complain) => {
       if (complain._id === complainId) {
         const updatedComplain = { ...complain, completed: !complain.completed };
         axios
-          .put(`/complain/${complainId}`, {
-            completed: updatedComplain.completed,
-          })
+          .put(
+            `https://hostelchatbotnitrr.onrender.com/complain/${complainId}`,
+            {
+              completed: updatedComplain.completed,
+            }
+          )
           .then(() => {
-            setComplains((prevComplains) =>
-              prevComplains.map((prevComplain) =>
+            setComplaintsData((prevComplaints) =>
+              prevComplaints.map((prevComplain) =>
                 prevComplain._id === complainId ? updatedComplain : prevComplain
               )
             );
@@ -43,7 +46,9 @@ const ComplainTable = ({ complaints }) => {
       }
       return complain;
     });
-    setComplains(updatedComplains);
+
+    // Update the local state immediately
+    setComplaintsData(updatedComplaints);
   };
 
   const handleOptionChange = (e) => {
@@ -51,9 +56,9 @@ const ComplainTable = ({ complaints }) => {
     setSelectedOption(value);
   };
 
-  const filteredComplains = selectedOption
-    ? complaints.filter((complain) => complain.problem === selectedOption)
-    : complaints;
+  const filteredComplaints = selectedOption
+    ? complaintsData.filter((complain) => complain.problem === selectedOption)
+    : complaintsData;
 
   return (
     <>
@@ -86,7 +91,7 @@ const ComplainTable = ({ complaints }) => {
           </Tr>
         </Thead>
         <Tbody>
-          {filteredComplains.map((complain) => (
+          {filteredComplaints.map((complain) => (
             <Tr key={complain._id}>
               <Td>{complain.name}</Td>
               <Td>{complain.contact}</Td>
