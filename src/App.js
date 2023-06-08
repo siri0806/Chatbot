@@ -9,6 +9,7 @@ import Complain from "./components/Complain";
 import ChatBot from "./components/ChatBot";
 import Admin from "./components/Admin";
 import Footer from "./components/Footer";
+import ErrorPage from "./components/ErrorPage";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/chatbot" element={<ChatBot />} />
         <Route path="/complain" element={<Complain />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />
     </BrowserRouter> //used for navigating without rendering pages again and again
