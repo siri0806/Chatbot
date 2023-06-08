@@ -7,23 +7,15 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import "./css/table.css";
 
 const ComplainTable = ({ complaints }) => {
-  const [complaintsData, setComplaintsData] = useState([]);
+  const [complaintsData, setComplaintsData] = useState(complaints); // Initialize complaintsData with the prop data
   const [selectedOption, setSelectedOption] = useState("");
 
   useEffect(() => {
-    axios
-      .get("https://hostelchatbotnitrr.onrender.com/complain")
-      .then((response) => {
-        setComplaintsData(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
+    setComplaintsData(complaints); // Update complaintsData when the prop data changes
+  }, [complaints]);
 
   const handleCheckboxChange = (complainId) => {
-    const updatedComplaints = complaints.map((complain) => {
-      // Use complaints prop here
+    const updatedComplaints = complaintsData.map((complain) => {
       if (complain._id === complainId) {
         const updatedComplain = { ...complain, completed: !complain.completed };
         axios
@@ -48,7 +40,6 @@ const ComplainTable = ({ complaints }) => {
       return complain;
     });
 
-    // Update the local state immediately
     setComplaintsData(updatedComplaints);
   };
 
@@ -58,8 +49,8 @@ const ComplainTable = ({ complaints }) => {
   };
 
   const filteredComplaints = selectedOption
-    ? complaints.filter((complain) => complain.problem === selectedOption) // Use complaints prop here
-    : complaints; // Use complaints prop here
+    ? complaintsData.filter((complain) => complain.problem === selectedOption)
+    : complaintsData;
 
   return (
     <>
