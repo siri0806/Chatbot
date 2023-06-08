@@ -23,6 +23,7 @@ const Complain = () => {
     // Create an object with the form data
     const complainData = {
       name,
+      email,
       contact,
       hostel,
       room,
@@ -53,6 +54,7 @@ const Complain = () => {
   };
 
   const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [contact, setContact] = useState("");
   const [hostel, setHostel] = useState("");
   const [room, setRoom] = useState("");
@@ -84,6 +86,21 @@ const Complain = () => {
                   required
                   value={name}
                   onChange={(e) => setName(e.target.value)}
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="email" className="form-label">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  className="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Enter Your Email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="form-group">

@@ -12,20 +12,29 @@ const Admin = () => {
   const handlePasskeyChange = (event) => {
     setPasskey(event.target.value);
   };
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
     axios
-      .post("https://hostelchatbotnitrr.onrender.com/admin", { key: passkey })
+      .get(`https://hostelchatbotnitrr.onrender.com/admin/${passkey}`)
       .then((response) => {
-        setComplaints(response.data.complains);
-        toast.success("Scroll Down For Complaints", {
-          position: toast.POSITION.TOP_CENTER,
-        });
+        const { data } = response;
+        console.log(response.data.complains);
+        if (data.complains) {
+          setComplaints(response.data.complains); // Set the complaints directly without parsing
+          toast.success("Scroll Down For Complaints", {
+            position: toast.POSITION.TOP_CENTER,
+          });
+        } else {
+          toast.error("Invalid key", {
+            position: toast.POSITION.TOP_CENTER,
+          });
+        }
       })
       .catch((error) => {
         console.log(error);
-        toast.error("Invalid key", {
+        toast.error("Error occurred", {
           position: toast.POSITION.TOP_CENTER,
         });
       });
@@ -38,7 +47,6 @@ const Admin = () => {
         <input
           type="text"
           placeholder="Enter The Key Of Your Hostel"
-          style={{}}
           value={passkey}
           onChange={handlePasskeyChange}
         />

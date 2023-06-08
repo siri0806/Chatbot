@@ -22,7 +22,8 @@ const ComplainTable = ({ complaints }) => {
   }, []);
 
   const handleCheckboxChange = (complainId) => {
-    const updatedComplaints = complaintsData.map((complain) => {
+    const updatedComplaints = complaints.map((complain) => {
+      // Use complaints prop here
       if (complain._id === complainId) {
         const updatedComplain = { ...complain, completed: !complain.completed };
         axios
@@ -57,8 +58,8 @@ const ComplainTable = ({ complaints }) => {
   };
 
   const filteredComplaints = selectedOption
-    ? complaintsData.filter((complain) => complain.problem === selectedOption)
-    : complaintsData;
+    ? complaints.filter((complain) => complain.problem === selectedOption) // Use complaints prop here
+    : complaints; // Use complaints prop here
 
   return (
     <>
