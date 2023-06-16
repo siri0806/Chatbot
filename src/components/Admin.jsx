@@ -45,7 +45,7 @@ const Admin = () => {
       <img className="admin" src="./images/admin.png" alt="admin icon" />
       <form className="form" onSubmit={handleSubmit}>
         <input
-          type="text"
+          type="password"
           placeholder="Enter The Key Of Your Hostel"
           value={passkey}
           onChange={handlePasskeyChange}
